@@ -1,0 +1,9 @@
+h1 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 100px;
+  background-color: cornflowerblue;
+}
+
+h2 {
+  border-radius: 2px solid black;
+}
