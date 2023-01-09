@@ -2,12 +2,24 @@
 import style from "./styles.module.css";
 
 const Pet = (props) => {
+
+  let hero = "http://pet-images.dev-apis.com/pets/none.jpg";
+  if (props.images.length) {
+    hero = props.images[0];
+  }
+
   return (
-    <div>
-      <h1 className="h1">{props.name}</h1>
-      <h2 className="h1">{props.animal}</h2>
-      <h2 className={style.h1}>{props.breed}</h2>
-    </div>
+    <a href={`/details/${props.id}`} className="pet">
+      <div className="image-container">
+        <img src={hero} alt={name} />
+      </div>
+      <div className="info">
+        <h1>{name}</h1>
+        <h2>
+          {props.animal} — {props.breed} — {props.location}
+        </h2>
+      </div>
+    </a>
   );
 };
 
